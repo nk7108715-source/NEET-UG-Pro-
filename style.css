@@ -40,3 +40,10 @@
 .report-metrics strong{font-size:16px}.report-metrics>span>span{color:#597368}
 .review-group{font-size:12px!important;margin:2px 0 8px}
 body:has(dialog[open]){overflow:hidden}
+
+/* v12 active-test navigation shows response status only. */
+.test-question-tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 12px}
+.test-question-tools>span{font-size:12px;color:#597368}
+.test-attempted{background:#d8f2e1;color:#155f33;border-color:#8bc7a0}
+.test-unanswered{background:#eef1f3;color:#54616a;border-color:#cbd3d9}
+.test-time-notice,.timeout-notice{padding:10px 12px;border:1px solid #e8cf8b;border-radius:10px;background:#fff8e6}

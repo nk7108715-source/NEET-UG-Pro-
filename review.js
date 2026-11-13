@@ -37,7 +37,7 @@ function questionNumberDialog(parent,s){
 }
 reportView=function(s){
  if(s.review)return reviewView(s);const r=resultFor(s),c=panel(text('Practice report','अभ्यास रिपोर्ट'));
- c.append(reviewControls(s),node('h3',s.group),node('div',r.marks+' / '+r.maxMarks,'result-score'),node('p',text('Marks earned','प्राप्त अंक')));
+ if(s.timedOut)c.append(node('p',text('Time is up. Your test was submitted automatically.','समय पूरा हुआ। आपका टेस्ट अपने आप जमा हो गया है।'),'timeout-notice'));c.append(reviewControls(s),node('h3',s.group),node('div',r.marks+' / '+r.maxMarks,'result-score'),node('p',text('Marks earned','प्राप्त अंक')));
  const metrics=node('div',undefined,'report-metrics');
  for(const [value,en,hi]of [[clockText(practiceElapsed(s)),'Time','समय'],[r.total,'Questions','प्रश्न'],[r.attempted,'Attempted','प्रयास किए'],[r.correct,'Correct','सही'],[r.wrong,'Wrong','गलत'],[r.missed,'Missed','बिना उत्तर'],[r.accuracy+'%','Accuracy','सटीकता']]){
   let item=node('span');item.append(node('strong',String(value)),node('span',text(en,hi)));metrics.append(item);

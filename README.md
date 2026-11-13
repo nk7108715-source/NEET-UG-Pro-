@@ -1,3 +1,28 @@
+# NEET UG Pro — v12 Timed PYQ and Test Navigation
+
+Extract this ZIP before uploading. Replace matching files in the existing GitHub repository root. Keep existing media files.
+
+Changed since v11: index.html, admin.html, style.css, practice.js, progress.js, review.js, README.md (7 files). The ZIP contains all 13 app files.
+No Firebase data or rules migration is required.
+
+## v12 behavior
+- Complete Test has a Question No. button near the top of the question card.
+- The centered number panel shows the whole test, including 180-question papers, in a scrollable grid. Green/check = attempted; grey/circle = unanswered; blue outline = current question. Status does not reveal correctness.
+- Tap any number to jump directly to that question. Existing answers remain selected. Clear Response changes its status back to unanswered.
+- Complete Test launched from a PYQ paper has a fixed 3-hour countdown, starting only when Complete Test is chosen. Normal PYQ practice, Chapter tests and Saved-question practice retain their elapsed timer.
+- A deadline is calculated once. Navigation, opening panels and submission confirmation do not pause/reset it. Background time counts; returning to the app rechecks the deadline immediately.
+- When time expires, the test automatically submits the current answers, closes active panels/confirmation, freezes test time at 3 hours and opens the report with a time-up message. Late answer clicks are rejected. Submission saves only one result.
+- Students may submit earlier using the existing centered confirmation.
+- Like earlier versions, incomplete tests are not saved/resumed across page reloads or leaving the section. Timing is client-side and uses device time.
+
+## Validation
+All JavaScript syntax checks pass. DOM interaction checks cover direct jumps, status/current markers, hidden correctness during tests, response clearing, 3-hour countdown, stable deadlines, early submission, time expiry, late-answer rejection, duplicate-history prevention, timer ticks and background-return checks. Existing v11 report/filter/review checks also pass.
+Browser visual QA could not run in this environment. Check layout and real-time behavior on Android Chrome after upload. Live Firebase and Android integration were not retested. This ZIP has not been uploaded to GitHub by the assistant.
+
+The previous notes below describe earlier versions; v12 behavior above supersedes any older timer/navigation descriptions.
+
+---
+
 # NEET UG Pro — v11 Report and Test Controls
 
 This updates the v10 Focus Mode app. Extract the ZIP first; upload its 13 files to the repository root, replacing matching files. Keep existing images such as mitosis.png. Do not upload the ZIP itself as the website.
