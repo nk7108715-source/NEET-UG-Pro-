@@ -1,3 +1,25 @@
+# NEET UG Pro — v11 Report and Test Controls
+
+This updates the v10 Focus Mode app. Extract the ZIP first; upload its 13 files to the repository root, replacing matching files. Keep existing images such as mitosis.png. Do not upload the ZIP itself as the website.
+
+Changed files: practice.js, review.js, style.css, index.html, admin.html, README.md.
+All other bundled files are unchanged from v10. No Firebase data or rules migration is required.
+
+## Changes
+- Submit test opens a centered modal with attempted/unanswered counts, confirmation and Keep solving. Escape dismisses it. Answers behind the modal cannot be clicked.
+- Complete test has Clear Response / Unmark. It removes the selected answer without moving to another question. The question becomes unanswered (0 marks until answered).
+- Report and review use a compact top toolbar for Question No. and expandable Filters. Filters include All, Correct, Wrong, Missed and Attempted, with counts.
+- Question No. opens a centered, scrollable modal containing all question numbers: green/check for correct, red/cross for wrong, grey/circle for missed. It includes the entire test even when reviewing a filter. Select a number to open that question and close the panel.
+- Report summary metrics use a compact layout. Existing focus mode, timer, images, scoring and local history behavior are preserved.
+
+## Validation
+JavaScript syntax checks and DOM interaction checks passed for unmark, unchanged question position, unanswered state, submission/cancellation/Escape, scoring, duplicate-result prevention, filters, status colours, direct question jumps and a 180-question grid.
+Browser visual QA could not run in this environment. Check the centered popup, scrolling and compact controls in Android Chrome after deployment. Real Firebase requests and Android integration have not been retested. This update has not been uploaded to GitHub by the assistant.
+
+The notes below describe earlier versions; the v11 behavior above supersedes older report-layout descriptions.
+
+---
+
 # NEET UG Pro v9 — Dashboard and test modes
 
 ## Update on Android

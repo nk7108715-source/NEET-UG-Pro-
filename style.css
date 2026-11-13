@@ -18,3 +18,25 @@
 
 /* Keep controls reachable while giving learning content the full app viewport. */
 .focus-toolbar{position:sticky;top:0;z-index:30;display:flex;justify-content:space-between;gap:10px;background:#f4f8f5;padding:10px 0;margin-bottom:14px;border-bottom:1px solid #dce8df}.focus-toolbar button{font-size:13px;padding:10px 14px;min-height:44px}.focus-mode>header,.focus-mode>footer,.focus-mode #nav,.focus-mode .hero,.focus-mode #cloud-status,.focus-mode .notice,.focus-mode #ad-banner-slot{display:none!important}.focus-mode{padding-bottom:0!important}.focus-mode main{max-width:1100px;padding:0 12px 24px;margin-top:0}.focus-mode #view>.card{margin-top:0}.open-mind-map .question-image{overflow:auto}.open-mind-map .question-image img{max-height:none;width:100%;height:auto}.focus-mode .open-mind-map{padding:12px}@media(min-width:700px){.focus-mode main{padding-left:24px;padding-right:24px}}
+
+/* v11: centered overlays and compact report controls */
+.center-dialog{position:fixed;inset:0;margin:auto;width:calc(100% - 28px);max-width:440px;max-height:82vh;max-height:82dvh;overflow:auto;overscroll-behavior:contain;border:1px solid var(--line);border-radius:18px;padding:20px;color:#183e36;background:#fff;box-shadow:0 18px 70px #102f3b40}
+.center-dialog::backdrop{background:#102d2677}
+.center-dialog h2{margin:0 0 12px;font-size:20px;padding-right:4px}
+.center-dialog button{margin:4px}
+.center-dialog .review-number{margin:0;min-width:0}
+.number-dialog{max-width:540px}
+.number-dialog .review-number-grid{grid-template-columns:repeat(auto-fill,minmax(48px,1fr));margin-top:12px;padding:4px;gap:8px}
+.number-dialog .number-legend{font-size:12px;margin:8px 0}
+.dialog-close{display:block;margin:0 0 8px auto!important}
+.report-tools{display:flex;align-items:flex-start;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.report-tools button,.compact-filters summary{font-size:12px;padding:8px 10px;min-height:44px}
+.compact-filters{margin:0;max-width:100%}
+.compact-filters summary{cursor:pointer;list-style:none;border:1px solid #d3e0d7;border-radius:12px;background:#fff;font-weight:600}
+.compact-filters summary::-webkit-details-marker{display:none}
+.filter-choices{display:flex;gap:5px;flex-wrap:wrap;padding:8px 0;max-width:450px}
+.report-metrics{display:flex;flex-wrap:wrap;gap:8px 14px;padding:12px 0;border-block:1px solid var(--line)}
+.report-metrics>span{display:flex;align-items:baseline;gap:5px;font-size:12px}
+.report-metrics strong{font-size:16px}.report-metrics>span>span{color:#597368}
+.review-group{font-size:12px!important;margin:2px 0 8px}
+body:has(dialog[open]){overflow:hidden}
