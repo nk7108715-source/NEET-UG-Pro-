@@ -51,3 +51,7 @@ Published mind maps browse Subject → Chapter → maps in that chapter. Multipl
 Existing mind maps without classification remain in Earlier uploads, preserving their images. To classify a previous map, open Admin → Manage mind maps → Edit map, set its Subject and bilingual Chapter, and save. The existing record ID and image are retained. Draft maps and A&R chapter catalog entries do not appear in the map browser. No bulk data migration or rules change is required.
 
 Validation added: one-question filtered review, full numbered colour grid, direct jumps, boundary controls, preserved scores/history, solution images, chapter browsing with multiple maps, exclusion of drafts/A&R metadata and legacy map editing. These are programmatic interaction checks; Android visual QA is still needed after deployment.
+
+
+## v10 — Focus Mode
+Upload all 13 extracted files into the repository root, replacing matching files. Keep mitosis.png. Practice/mode choice, test, report, analysis and an opened mind map automatically hide the app header/navigation. Use the sticky top toggle to restore navigation without changing answers/timing. Back from analysis returns to the report; Back from the report or mode choice returns to the section. Leaving active practice asks for confirmation and discards the unfinished session. Open full map on a map card enters the dedicated viewer; Back returns to the map list. Focus is an app layout mode; it does not force Android/browser system controls to disappear.
