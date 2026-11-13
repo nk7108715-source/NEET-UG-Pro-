@@ -3,3 +3,5 @@
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 
 #view article h2,.record p{white-space:pre-line}details summary{cursor:pointer;font-weight:600}details p{padding:8px;background:#f2f6f3;border-radius:10px}#ar-form{border-top:3px solid #9b69bd}
+
+[hidden]{display:none!important}.admin-page{padding-bottom:0}.section-heading{font-size:24px;margin:8px 0 20px}#ad-banner-slot:not([hidden]){margin:32px 0 40px;padding:16px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);min-height:80px}.actions h3{margin:8px}.hero[hidden]+#cloud-status{margin-top:0}
