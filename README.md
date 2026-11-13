@@ -37,3 +37,16 @@ Home has a new A&R card. Admin has a separate bilingual form with assertion, rea
 Student A&R access remains unavailable while native rewarded-ad integration is pending. There are no fake ad completions or timers. No 24-hour entitlement is currently granted or claimed. The final Android/server reward-verification and set catalog are future work. Do not change these drafts to access=free to bypass the pending integration. Admin preview results use the existing on-device practice history.
 
 Basic checks cover A&R validation, bilingual serialization, locked student UI and draft isolation. Live save/preview testing remains after upload.
+
+## Version 5 — Year-wise PYQs and separate admin
+Upload/replace all eight app files: index.html, admin.html, style.css, app.js, cloud.js, ar.js, ui.js and README.md. Keep existing mitosis.png and other media.
+
+Admin link: https://nk7108715-source.github.io/NEET-UG-Pro-/admin.html . Bookmark this link. The student app has no Admin button; the separate page still requires the same UID-authorized login. Hiding the link is not the security boundary: Firestore rules continue to enforce UID permissions. Both pages share the same origin and Firebase session.
+
+PYQs group by numeric year, then Main NEET / Re-NEET. Only paper types with published questions appear. One combined practice per year/type; no additional Set/Code screen. Admin selects year and paper type when adding/editing PYQs. Old yearless PYQs remain visible in Earlier uploads; edit them to assign a year. Current year through 1988 is supported, descending. Existing question IDs and bookmarks remain unchanged when edited.
+
+The hero appears only on Home; other screens show their own content. Header and language selector remain. No admin shortcut is present in student A&R screen, even when the admin session is active.
+
+Banner placement is prepared as an invisible slot on Home/PYQ/Chapters. No real banners are served, and no fake banner is displayed. Slot stays hidden until future Android ad integration. No banners on questions, mind maps or admin. A native ad implementation and real-device placement QA are still required.
+
+No Firebase rules changes required. No cloud content is overwritten by uploading these files. Live deployment is performed by the user.
