@@ -1,9 +1,10 @@
 'use strict';
+const IS_ADMIN_PAGE=location.pathname.endsWith('/admin.html');
 const $=id=>document.getElementById(id);
 const read=(key,fallback)=>{try{return JSON.parse(localStorage.getItem('neet2:'+key))??fallback}catch{return fallback}};
 const save=(key,value)=>{try{localStorage.setItem('neet2:'+key,JSON.stringify(value))}catch{alert('Storage unavailable. Your progress cannot be saved.')}};
 const sample=[{id:'demo-cell',subject:'Botany',chapter:'Cell: The Unit of Life',paper:'Sample practice',type:'mcq',en:'Which organelle is the major site of aerobic ATP production?',hi:'ऑक्सी श्वसन में ATP उत्पादन का मुख्य स्थान कौन-सा कोशिकांग है?',options:[['Mitochondrion','माइटोकॉन्ड्रिया'],['Ribosome','राइबोसोम'],['Golgi apparatus','गॉल्जी उपकरण'],['Lysosome','लाइसोसोम']],answer:0,explanation:['Mitochondria carry out oxidative phosphorylation.','माइटोकॉन्ड्रिया में ऑक्सीडेटिव फॉस्फोराइलेशन होता है।']},{id:'demo-force',subject:'Physics',chapter:'Laws of Motion',paper:'Sample practice',type:'mcq',en:'The SI unit of force is:',hi:'बल का SI मात्रक है:',options:[['Newton','न्यूटन'],['Joule','जूल'],['Watt','वाट'],['Pascal','पास्कल']],answer:0,explanation:['Force is measured in newtons (kg m s⁻²).','बल न्यूटन (kg m s⁻²) में मापा जाता है।']}];
-let questions=read('questions',sample),marks=read('bookmarks',[]),history=read('history',[]),lang=read('language','en'),tab='Home',session=null;
+let questions=read('questions',sample),marks=read('bookmarks',[]),history=read('history',[]),lang=read('language','en'),tab=IS_ADMIN_PAGE?'Manage':'Home',session=null;
 function node(tag,text,cls){let n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n}
 function button(text,fn,cls){let b=node('button',text,cls);b.onclick=fn;return b}
 function text(en,hi){return lang==='hi'?hi:lang==='both'?en+' / '+hi:en}
