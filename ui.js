@@ -4,7 +4,7 @@ const MIN_PYQ_YEAR=1988,MAX_PYQ_YEAR=new Date().getFullYear();
 function getPYQYear(q){let year=Number(q.year);return Number.isInteger(year)&&year>=MIN_PYQ_YEAR&&year<=MAX_PYQ_YEAR?year:null}
 function getPaperType(q){return q.paperType==='Re-NEET'?'Re-NEET':'Main NEET'}
 function pyqView(){
- const all=questions.filter(q=>q.category==='PYQ'&&q.practiceType!=='ar');
+ const all=questions.filter(q=>q.category==='PYQ');
  const years=[...new Set(all.map(getPYQYear).filter(Boolean))].sort((a,b)=>b-a);
  if(selectedPYQYear!==null&&!years.includes(selectedPYQYear))selectedPYQYear=null;
  let title=node('h2',text('Previous Year Questions','पिछले वर्षों के प्रश्न'));$('view').append(title);
